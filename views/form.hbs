@@ -5,9 +5,23 @@
     </head>
 
     <body>
+        <form action="/edit" method="post">
+            <input type="hidden" id="id" name="id" value="{{id}}">
 
-        <h1>Hello World!</h1>
+            <label for="firstname">Vorname:</label>
+            <input type="text" id="firstname" name="firstname" value="{{firstname}}">
 
+            <label for="lastname">Nachname:</label>
+            <input type="text" id="lastname" name="lastname" value="{{lastname}}">
+
+            <label for="phone">Telefon:</label>
+            <input type="text" id="phone" name="phone" value="{{phone}}">
+
+            <label for="email">E-Mail:</label>
+            <input type="text" id="email" name="email" value="{{email}}">
+
+            <input type="submit" value="speichern">
+        </form>
     </body>
 
 </html>
