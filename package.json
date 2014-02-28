@@ -14,6 +14,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "express": "~3.4.8",
-    "express-hbs": "~0.7.9"
+    "express-hbs": "~0.7.9",
+    "csv-db": "0.0.2"
   }
 }
