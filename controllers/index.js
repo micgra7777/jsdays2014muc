@@ -19,11 +19,21 @@ module.exports = {
         var id = req.params.id;
 
         if (id) {
+            addressModel.get(id).then(function (data) {
 
+                var address = {
+                    'id': data.id,
+                    'firstname': data.firstname,
+                    'lastname': data.lastname,
+                    'phone': data.phone,
+                    'email': data.email
+                };
+
+                res.render('form', address);
+            });
+        } else {
+            res.render('form');
         }
-
-        res.render('form');
-
     },
 
     save: function (req, res) {
@@ -31,14 +41,11 @@ module.exports = {
 
         var id = body.id;
         delete body.id;
-        console.log(id, 'xxx', body);
 
-        if (body.id) {
-            addressModel.update(body, body.id).then(function () {res.redirect('/')});
+        if (id) {
+            addressModel.update(body, id).then(function () {res.redirect('/')});
         } else {
             addressModel.insert(body).then(function () {res.redirect('/')});
         }
     }
-
-
-}
+};
