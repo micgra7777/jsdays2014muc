@@ -5,7 +5,7 @@ var routes = require('./routes');
 var app = express();
 
 app.engine('hbs', hbs.express3());
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', require('path').join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 routes(app);
