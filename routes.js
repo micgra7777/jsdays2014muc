@@ -1,3 +1,5 @@
-/**
- * Created by sspringer on 28/02/14.
- */
+module.exports = function (app) {
+    app.get('/', function (req, res) {
+        res.end('Hallo Welt');
+    });
+};

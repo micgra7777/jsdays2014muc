@@ -11,5 +11,8 @@
     "url": "/Users/sspringer/git/jsdaysnode/"
   },
   "author": "",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~3.4.8"
+  }
 }

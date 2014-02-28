@@ -1,9 +1,8 @@
 var express = require('express');
+var routes = require('./routes');
 
 var app = express();
 
-app.get('/', function (req, res) {
-    res.end('Hallo Welt');
-});
+routes(app);
 
 app.listen(8080);
