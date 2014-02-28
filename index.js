@@ -8,6 +8,8 @@ app.engine('hbs', hbs.express3());
 app.set('views', require('path').join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+app.use(express.static(__dirname+'/public'));
+
 routes(app);
 
 app.listen(8080);
