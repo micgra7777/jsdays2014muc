@@ -7,5 +7,11 @@ module.exports = {
             res.render('index', {addr: addr});
         });
 
+    },
+
+    'delete': function (req, res) {
+        addressModel.delete(req.params.id).then(function () {
+            res.redirect('/');
+        });
     }
 }
