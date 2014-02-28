@@ -1,5 +1,5 @@
+var indexController = require('./controllers/index')
+
 module.exports = function (app) {
-    app.get('/', function (req, res) {
-        res.end('Hallo Welt');
-    });
+    app.get('/', indexController.index);
 };
