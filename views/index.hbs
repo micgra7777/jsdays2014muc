@@ -8,37 +8,50 @@
 
     <body>
 
-        <h1>Hello World!</h1>
 
-        <a href="/edit">Neu</a>
 
-        <table>
 
-            <thead>
-                <tr>
-                    <th>Vorname</th>
-                    <th>Nachname</th>
-                    <th>Telefon</th>
-                    <th>E-Mail</th>
-                </tr>
-            </thead>
 
-            <tbody>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
 
-                {{#each addr}}
-                    <tr>
-                        <td>{{this.firstname}}</td>
-                        <td>{{this.lastname}}</td>
-                        <td>{{this.phone}}</td>
-                        <td>{{this.email}}</td>
-                        <td><a href="/edit/{{this.id}}">edit</a></td>
-                        <td><a href="/delete/{{this.id}}">delete</a></td>
-                    </tr>
-                {{/each}}
+                <h1>My Adressbook</h1>
 
-            </tbody>
+                <a class="btn btn-default" href="/edit">Neu</a>
 
-        </table>
+                <table class="table table-striped table-hover">
+
+                    <thead>
+                        <tr>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>Telefon</th>
+                            <th>E-Mail</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        {{#each addr}}
+                            <tr>
+                                <td>{{this.firstname}}</td>
+                                <td>{{this.lastname}}</td>
+                                <td>{{this.phone}}</td>
+                                <td>{{this.email}}</td>
+                                <td><a href="/edit/{{this.id}}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                <td><a href="/delete/{{this.id}}"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            </tr>
+                        {{/each}}
+
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
     </body>
 
 </html>
